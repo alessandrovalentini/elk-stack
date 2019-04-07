@@ -21,13 +21,23 @@ services:
     networks:
       - elknet
       
-
   logstash:
     image: docker.elastic.co/logstash/logstash:6.7.1
     volumes:
       - ./logstash/pipeline/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     networks:
       - elknet
+
+  web:
+    image: openjdk:8-jre
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./web/client.jar:/client.jar"
+    entrypoint: ["java", "-jar", "/client.jar"]
+    networks:
+      - elknet
+
 
 networks:
   elknet:
