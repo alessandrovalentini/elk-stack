@@ -31,6 +31,12 @@ echo alias docker-compose="'"'docker run --rm \
     -w="/$PWD" \
     docker/compose:1.24.0'"'" >> ~/.bashrc
 ```
+
+and reload configuration
+
+```
+source ~/.bashrc
+```
 Increase virtual memory limit to start elastic search
 
 ```
@@ -62,9 +68,14 @@ git clone https://github.com/alessandrovalentini/elk-stack.git
 Move into directory and run the project
 ```
 cd ~/elk-stack
-docker compose up
+docker-compose up
 ```
-### Link
+### Demo instance-1
 * Kibana dashboard: http://35.228.115.142:5601
 * Rabbit management: http://35.228.115.142:15672
 * Log API: http://35.228.115.142:8080/hello/log1
+
+### Demo instance-2
+* Kibana dashboard: http://35.228.203.207:5601
+* Rabbit management: http://35.228.203.207:15672
+* Log API: http://35.228.203.207:8080/hello/log1
