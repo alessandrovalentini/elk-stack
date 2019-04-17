@@ -78,4 +78,4 @@ docker-compose up
 ### Demo instance-2
 * Kibana dashboard: http://35.228.203.207:5601
 * Rabbit management: http://35.228.203.207:15672
-* Log API: http://35.228.203.207:8080/hello/log1
+* Log API: http://35.228.203.207:8080/log/i/log1
